@@ -53,7 +53,6 @@ void QuickSort(int* v , int tam){
 }
 
 
-
 void SelectionSort(int* v, int tam){
     int i, j, k, min;
     for (i =0; i<(tam -1); i++){
@@ -97,4 +96,17 @@ void BubbleSort(int* v, int tam) {
             
         }
     }while (trocou);
+}
+
+//Geraador de dados
+int Ger(int tam){
+
+    int i;
+    int v[tam];
+
+    for (i=0; i<tam; i++){
+        v[i] = rand();
+    } 
+
+    return v;   
 }
