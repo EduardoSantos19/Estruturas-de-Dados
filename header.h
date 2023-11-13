@@ -1,8 +1,11 @@
-void QuickSort(int* v , int tam);
+void QuickSort(int *v, int tam);
 
 void SelectionSort(int* v, int tam);
 
 void BubbleSort(int* v, int tam);
 
-int Ger(int tam);
+void clrscr();
+
+
+void Ger();
 

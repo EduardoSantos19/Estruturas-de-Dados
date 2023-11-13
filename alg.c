@@ -1,9 +1,10 @@
+#include "header.h"
 #include <stdio.h>
 #include <conio.h>
 #include <stdlib.h>
 
 //QuickSort
-void QuickSort(int* v , int tam){
+void QuickSort(int *v, int tam){
     int j = tam, k;
     if (tam <=1) {
         return;
@@ -99,14 +100,20 @@ void BubbleSort(int* v, int tam) {
 }
 
 //Geraador de dados
-int Ger(int tam){
+void Ger(){
 
-    int i;
+    int tam=5;
+    int i=0;
     int v[tam];
 
     for (i=0; i<tam; i++){
         v[i] = rand();
     } 
-
-    return v;   
+    i=0;
+    for (i=0; i<tam; i++) {
+        printf("%d ", v[i]);
+    }
+    printf("\n");
+    QuickSort(v, tam);   
+    
 }

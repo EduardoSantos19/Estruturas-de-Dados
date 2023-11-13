@@ -1,9 +1,11 @@
+#include "header.h"
 #include <stdio.h>
 #include <conio.h>
 #include <stdlib.h>
-#include <head.h>
 
 int main(){
+
+    Ger();
 
     return 0;
 }
