@@ -7,5 +7,5 @@ void BubbleSort(int* v, int tam);
 void clrscr();
 
 
-void Ger();
+void GerQ();
 

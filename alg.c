@@ -1,4 +1,5 @@
 #include "header.h"
+#include <time.h>
 #include <stdio.h>
 #include <conio.h>
 #include <stdlib.h>
@@ -99,8 +100,41 @@ void BubbleSort(int* v, int tam) {
     }while (trocou);
 }
 
+void Print(){
+    /*selectionSort
+    printf("\n\n\n===========================================\n");
+    printf("Ordenação SelectionSort: \n");
+    printf("===========================================\n");
+    printf("vetor original: \n");
+    printf("-------------------------------------------\n");
+    for(i=0; i<tam; i++){
+        printf("%d ", vss[i]);
+    }
+    printf("-------------------------------------------\n");
+    printf("passos da ordenação: \n");
+    printf("-------------------------------------------\n");
+    SelectionSort(vss, tam);*/
+
+
+
+    /*BobbleSort
+    printf("===========================================\n");
+    printf("Ordenação BobbleSort: \n");
+    printf("===========================================\n");
+    printf("vetor original: \n");
+    printf("-------------------------------------------\n");
+    for(i=0; i<tam; i++){
+        printf("%d ", vbs[i]);
+    }
+    printf("-------------------------------------------\n");
+    printf("passos da ordenação: \n");
+    printf("-------------------------------------------\n");
+    BubbleSort(vbs, tam);*/
+}
 //Geraador de dados
-void Ger(){
+void GerQ(){
+
+    clock_t t;
 
     int tam=5;
     int i=0;
@@ -110,10 +144,22 @@ void Ger(){
         v[i] = rand();
     } 
     i=0;
-    for (i=0; i<tam; i++) {
+    
+
+    printf("\n\n\n===========================================\n");
+    printf("Ordenacao QuickSort: \n");
+    printf("===========================================\n");
+    printf("vetor original: ");
+    for(i=0; i<tam; i++){
         printf("%d ", v[i]);
     }
-    printf("\n");
-    QuickSort(v, tam);   
+    printf("\n-------------------------------------------\n");
+    printf("passos da ordenacao: \n");
+    printf("-------------------------------------------\n");
+
+    t = clock();
+    QuickSort(v, tam);
+    t = (clock() - t);   
+    printf("Tempo de execucao: %.2lfms", (double)t);
     
 }
