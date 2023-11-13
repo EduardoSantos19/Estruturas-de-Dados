@@ -4,8 +4,5 @@ void SelectionSort(int* v, int tam);
 
 void BubbleSort(int* v, int tam);
 
-void clrscr();
-
-
-void GerQ();
+void Ger();
 

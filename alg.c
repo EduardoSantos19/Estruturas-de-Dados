@@ -4,7 +4,7 @@
 #include <conio.h>
 #include <stdlib.h>
 
-//QuickSort
+//Algoritimos de Ordenação
 void QuickSort(int *v, int tam){
     int j = tam, k;
     if (tam <=1) {
@@ -100,66 +100,177 @@ void BubbleSort(int* v, int tam) {
     }while (trocou);
 }
 
-void Print(){
-    /*selectionSort
-    printf("\n\n\n===========================================\n");
-    printf("Ordenação SelectionSort: \n");
-    printf("===========================================\n");
-    printf("vetor original: \n");
-    printf("-------------------------------------------\n");
-    for(i=0; i<tam; i++){
-        printf("%d ", vss[i]);
-    }
-    printf("-------------------------------------------\n");
-    printf("passos da ordenação: \n");
-    printf("-------------------------------------------\n");
-    SelectionSort(vss, tam);*/
 
-
-
-    /*BobbleSort
-    printf("===========================================\n");
-    printf("Ordenação BobbleSort: \n");
-    printf("===========================================\n");
-    printf("vetor original: \n");
-    printf("-------------------------------------------\n");
-    for(i=0; i<tam; i++){
-        printf("%d ", vbs[i]);
-    }
-    printf("-------------------------------------------\n");
-    printf("passos da ordenação: \n");
-    printf("-------------------------------------------\n");
-    BubbleSort(vbs, tam);*/
-}
-//Geraador de dados
-void GerQ(){
-
-    clock_t t;
-
-    int tam=5;
+//Gerador de Vetores
+void Ger(){
+     //variaveis de controle
+    clock_t t=0;
+    clock_t tmq=0;
+    clock_t tmb=0;
+    clock_t tms=0;
+    int run= 125;
+    
+    //variaveis do vetor
+    int tam=15;
     int i=0;
-    int v[tam];
+    int v[tam];    
 
+    //gera vetor
     for (i=0; i<tam; i++){
         v[i] = rand();
-    } 
-    i=0;
-    
-
-    printf("\n\n\n===========================================\n");
-    printf("Ordenacao QuickSort: \n");
-    printf("===========================================\n");
-    printf("vetor original: ");
-    for(i=0; i<tam; i++){
-        printf("%d ", v[i]);
     }
-    printf("\n-------------------------------------------\n");
-    printf("passos da ordenacao: \n");
-    printf("-------------------------------------------\n");
 
-    t = clock();
-    QuickSort(v, tam);
-    t = (clock() - t);   
-    printf("Tempo de execucao: %.2lfms", (double)t);
+    //Run QuickSort
+    int i2;
+    for (i2=0; i2<run; i2++) {
+
+        printf("\n\n\n===========================================\n");
+        printf("Ordenacao QuickSort: \n");
+        printf("===========================================\n");
+        printf("vetor original: ");
+        for(i=0; i<tam; i++){
+            printf("%d ", v[i]);
+        }
+        printf("\n-------------------------------------------\n");
+        printf("passos da ordenacao: \n");
+        printf("-------------------------------------------\n");
+
+        t = clock();
+        QuickSort(v, tam);
+        tmq += (clock() - t);
+    } 
+
+    //Run SelectionSort
+    int i3;
+    for (i3=0; i3<run; i3++){
+
+        printf("\n\n\n===========================================\n");
+        printf("Ordenacao SelectionSort: \n");
+        printf("===========================================\n");
+        printf("vetor original: ");
+        for(i=0; i<tam; i++){
+            printf("%d ", v[i]);
+        }
+        printf("\n-------------------------------------------\n");
+        printf("passos da ordenacao: \n");
+        printf("-------------------------------------------\n");
+
+        t = clock();
+        SelectionSort(v, tam);
+        tms += (clock() - t);
+    }
+
+    //Run BobbleSort
+    int i4;
+    for (i4=0; i4<run; i4++){
+
+        printf("\n\n\n===========================================\n");
+        printf("Ordenacao BobbleSort: \n");
+        printf("===========================================\n");
+        printf("vetor original: ");
+        for(i=0; i<tam; i++){
+            printf("%d ", v[i]);
+        }
+        printf("\n-------------------------------------------\n");
+        printf("passos da ordenacao: \n");
+        printf("-------------------------------------------\n");
+
+        t = clock();
+        BubbleSort(v, tam);
+        tmb += (clock() - t);
+    }
     
+    printf("\n\n\n\n\n===========================================\n");
+    printf("===========================================\n");
+    printf("Execucao de algorito comcluida com sucesso, %d vezes por algoritimo", run);
+    printf("\ntotal de execucoes: %d", (run*3));
+    printf("===========================================\n");
+    printf("===========================================\n");
+    printf("*****Pressione enter para exibir resultados*****:");getch();
+
+
+
+    int i5;
+    for (i5=1; i5<=3; i5++) {
+
+        if (tmq>=tms) {
+            if (tmq>=tmb){
+                //Report Média QuickSort
+                printf("\n\n\n===========================================\n");
+                printf("Ordenacao SelectionSort: N-%d",i5);
+                printf("\n===========================================\n");
+                printf("vetor original: ");
+                for(i=0; i<tam; i++){
+                    printf("%d ", v[i]);
+                }
+                printf("\n-------------------------------------------\n");
+                printf("Tempo total de execucao: %.2lfms", (double)t);
+                printf("\n-------------------------------------------\n");
+                printf("-------------------------------------------\n");
+                printf("Tempo medio de execucao do algoritimo: %.2lfms", ((double)tmq/run));
+                printf("\n===========================================\n\n\n");
+                if (i5 != 3) {
+                    printf("\n\n*****Pressione enter para exibir proximo do ranking*****:");getch();
+                }
+            }else {
+                ///Report Média BubbleSort
+                printf("\n\n\n===========================================\n");
+                printf("Ordenacao BobbleSort: N-%d",i5);
+                printf("\n===========================================\n");
+                printf("vetor original: ");
+                for(i=0; i<tam; i++){
+                    printf("%d ", v[i]);
+                }
+                printf("\n-------------------------------------------\n");
+                printf("Tempo total de execucao: %.2lfms", (double)t);
+                printf("\n-------------------------------------------\n");
+                printf("-------------------------------------------\n");
+                printf("Tempo medio de execucao do algoritimo: %.2lfms", ((double)tmb/run));
+                printf("\n===========================================\n\n\n");
+                if (i5 != 3) {
+                    printf("\n\n*****Pressione enter para exibir proximo do ranking*****:");getch();
+                }
+            }
+        }else {
+            if (tms>=tmb) {
+                //Report Média SelectionSort
+                printf("===========================================\n");
+                printf("Ordenacao SelectionSort: N-%d",i5);
+                printf("\n===========================================\n");
+                printf("vetor original: ");
+                for(i=0; i<tam; i++){
+                    printf("%d ", v[i]);
+                }
+                printf("\n-------------------------------------------\n");
+                printf("Tempo total de execucao: %.2lfms", (double)t);
+                printf("\n-------------------------------------------\n");
+                printf("-------------------------------------------\n");
+                printf("Tempo medio de execucao do algoritimo: %.2lfms", ((double)tms/run));
+                printf("\n===========================================\n\n\n");
+                if (i5 != 3) {
+                    printf("\n\n*****Pressione enter para exibir proximo do ranking*****:");getch();
+                }
+            } else { 
+                ///Report Média BubbleSort
+                printf("\n\n\n===========================================\n");
+                printf("Ordenacao BobbleSort: N-%d",i5);
+                printf("\n===========================================\n");
+                printf("vetor original: ");
+                for(i=0; i<tam; i++){
+                    printf("%d ", v[i]);
+                }
+                printf("\n-------------------------------------------\n");
+                printf("Tempo total de execucao: %.2lfms", (double)t);
+                printf("\n-------------------------------------------\n");
+                printf("-------------------------------------------\n");
+                printf("Tempo medio de execucao: %.2lfms", ((double)tmb/run));
+                printf("\n===========================================\n");
+                if (i5 != 3) {
+                    printf("\n\n*****Pressione enter para exibir proximo do ranking*****:");getch();
+                }
+            }
+        }
+    }    
 }
+
+//http://wurthmann.blogspot.com/2015/04/medir-tempo-de-execucao-em-c.html

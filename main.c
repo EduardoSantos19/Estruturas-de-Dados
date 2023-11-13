@@ -5,7 +5,11 @@
 
 int main(){
 
-    GerQ();
+    Ger();
 
+    printf("\n-------------------------------------------\n");
+    printf("\nPressione qualquer tecla para encerrar o programa: \n");
+    printf("-------------------------------------------\n");
+    getch();
     return 0;
 }
