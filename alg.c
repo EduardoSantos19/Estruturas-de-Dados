@@ -195,8 +195,8 @@ void Ger(){
     int i5;
     for (i5=1; i5<=3; i5++) {
 
-        if (tmq>=tms) {
-            if (tmq>=tmb){
+        if (tmq<=tms) {
+            if (tmq<=tmb){
                 //Report Média QuickSort
                 printf("\n\n\n===========================================\n");
                 printf("Ordenacao QuickSort: N-%d",i5);
@@ -211,7 +211,7 @@ void Ger(){
                 printf("-------------------------------------------\n");
                 printf("Tempo medio de execucao do algoritimo: %.2lfms", ((double)tmq/run));
                 printf("\n===========================================\n\n\n");
-                tmq=0;
+                tmq=50000;
                 if (i5 != 3) {
                     printf("\n\n*****Pressione enter para exibir proximo do ranking*****:");getch();
                 }
@@ -230,13 +230,13 @@ void Ger(){
                 printf("-------------------------------------------\n");
                 printf("Tempo medio de execucao do algoritimo: %.2lfms", ((double)tmb/run));
                 printf("\n===========================================\n\n\n");
-                tmb=0;
+                tmb=50000;
                 if (i5 != 3) {
                     printf("\n\n*****Pressione enter para exibir proximo do ranking*****:");getch();
                 }
             }
         }else {
-            if (tms>=tmb) {
+            if (tms<=tmb) {
                 //Report Média SelectionSort
                 printf("===========================================\n");
                 printf("Ordenacao SelectionSort: N-%d",i5);
@@ -251,7 +251,7 @@ void Ger(){
                 printf("-------------------------------------------\n");
                 printf("Tempo medio de execucao do algoritimo: %.2lfms", ((double)tms/run));
                 printf("\n===========================================\n\n\n");
-                tms=0;
+                tms=50000;
                 if (i5 != 3) {
                     printf("\n\n*****Pressione enter para exibir proximo do ranking*****:");getch();
                 }
@@ -270,7 +270,7 @@ void Ger(){
                 printf("-------------------------------------------\n");
                 printf("Tempo medio de execucao: %.2lfms", ((double)tmb/run));
                 printf("\n===========================================\n");
-                tmb=0;
+                tmb=50000;
                 if (i5 != 3) {
                     printf("\n\n*****Pressione enter para exibir proximo do ranking*****:");getch();
                 }
