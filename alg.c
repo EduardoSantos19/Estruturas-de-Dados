@@ -101,42 +101,50 @@ void BubbleSort(int* v, int tam) {
 }
 
 
-//Gerador de Vetores
+//Gerador de Dados
 void Ger(){
      //variaveis de controle
     clock_t t=0;
     clock_t tmq=0;
     clock_t tmb=0;
     clock_t tms=0;
-    int run= 125;
+    int run= 2;
     
     //variaveis do vetor
     int tam=15;
-    int i=0;
-    int v[tam];    
+    int *vo[tam];
+    int vq[tam];
+    int vb[tam];
+    int vs[tam];    
 
-    //gera vetor
+    //Gerador de Vetores
+    int i=0;
+    srand(time(NULL));
     for (i=0; i<tam; i++){
-        v[i] = rand();
+        vo[i] = rand() % 100;
     }
 
     //Run QuickSort
     int i2;
     for (i2=0; i2<run; i2++) {
 
+        *vq=&vo;
+        
         printf("\n\n\n===========================================\n");
         printf("Ordenacao QuickSort: \n");
         printf("===========================================\n");
         printf("vetor original: ");
+        //Printa Vetor Original
+        int i;
         for(i=0; i<tam; i++){
-            printf("%d ", v[i]);
+            printf("%d ", &vq[i]);
         }
         printf("\n-------------------------------------------\n");
         printf("passos da ordenacao: \n");
         printf("-------------------------------------------\n");
 
         t = clock();
-        QuickSort(v, tam);
+        QuickSort(vq, tam);
         tmq += (clock() - t);
     } 
 
@@ -144,19 +152,23 @@ void Ger(){
     int i3;
     for (i3=0; i3<run; i3++){
 
+        *vs=vo;
+        
         printf("\n\n\n===========================================\n");
         printf("Ordenacao SelectionSort: \n");
         printf("===========================================\n");
         printf("vetor original: ");
+        //Printa Vetor Original
+        int i;
         for(i=0; i<tam; i++){
-            printf("%d ", v[i]);
+            printf("%d ", vs[i]);
         }
         printf("\n-------------------------------------------\n");
         printf("passos da ordenacao: \n");
         printf("-------------------------------------------\n");
 
         t = clock();
-        SelectionSort(v, tam);
+        SelectionSort(vs, tam);
         tms += (clock() - t);
     }
 
@@ -164,19 +176,23 @@ void Ger(){
     int i4;
     for (i4=0; i4<run; i4++){
 
+        *vb=vo;
+        
         printf("\n\n\n===========================================\n");
         printf("Ordenacao BobbleSort: \n");
         printf("===========================================\n");
         printf("vetor original: ");
+        //Printa Vetor Original
+        int i;
         for(i=0; i<tam; i++){
-            printf("%d ", v[i]);
+            printf("%d ", vb[i]);
         }
         printf("\n-------------------------------------------\n");
         printf("passos da ordenacao: \n");
         printf("-------------------------------------------\n");
 
         t = clock();
-        BubbleSort(v, tam);
+        BubbleSort(vb, tam);
         tmb += (clock() - t);
     }
     
@@ -191,7 +207,7 @@ void Ger(){
     printf("*****Pressione enter para exibir resultados*****:"); getch();
     
 
-
+    //Gerador de Ranking
     int i5;
     for (i5=1; i5<=3; i5++) {
 
@@ -202,11 +218,13 @@ void Ger(){
                 printf("Ordenacao QuickSort: N-%d",i5);
                 printf("\n===========================================\n");
                 printf("vetor original: ");
+                //Printa Vetor Original
+                int i;
                 for(i=0; i<tam; i++){
-                    printf("%d ", v[i]);
+                    printf("%d ", vo[i]);
                 }
                 printf("\n-------------------------------------------\n");
-                printf("Tempo total de execucao: %.2lfms", (double)t);
+                printf("Tempo total de execucao: %.2lfms", (double)tmq);
                 printf("\n-------------------------------------------\n");
                 printf("-------------------------------------------\n");
                 printf("Tempo medio de execucao do algoritimo: %.2lfms", ((double)tmq/run));
@@ -221,8 +239,9 @@ void Ger(){
                 printf("Ordenacao BobbleSort: N-%d",i5);
                 printf("\n===========================================\n");
                 printf("vetor original: ");
+                int i;
                 for(i=0; i<tam; i++){
-                    printf("%d ", v[i]);
+                    printf("%d ", vo[i]);
                 }
                 printf("\n-------------------------------------------\n");
                 printf("Tempo total de execucao: %.2lfms", (double)t);
@@ -242,8 +261,9 @@ void Ger(){
                 printf("Ordenacao SelectionSort: N-%d",i5);
                 printf("\n===========================================\n");
                 printf("vetor original: ");
+                int i;
                 for(i=0; i<tam; i++){
-                    printf("%d ", v[i]);
+                    printf("%d ", vo[i]);
                 }
                 printf("\n-------------------------------------------\n");
                 printf("Tempo total de execucao: %.2lfms", (double)t);
@@ -261,8 +281,9 @@ void Ger(){
                 printf("Ordenacao BobbleSort: N-%d",i5);
                 printf("\n===========================================\n");
                 printf("vetor original: ");
+                int i;
                 for(i=0; i<tam; i++){
-                    printf("%d ", v[i]);
+                    printf("%d ", vo[i]);
                 }
                 printf("\n-------------------------------------------\n");
                 printf("Tempo total de execucao: %.2lfms", (double)t);
