@@ -1,7 +1,6 @@
 #include "header.h"
 #include <time.h>
 #include <stdio.h>
-#include <conio.h>
 #include <stdlib.h>
 
 //Algoritimos de Ordenação
@@ -219,7 +218,7 @@ void Ger(){
     printf("===========================================================================");
     printf("\n*********************************************************************************************\n\n\n\n\n\n\n\n"); 
     printf("*****Pressione enter para exibir resultados*****:");
-    getch();
+    getchar();
     
 
     //Gerador de Ranking
@@ -236,7 +235,7 @@ void Ger(){
                 //Printa Vetor Original
                 int i;
                 for(i=0; i<tam; i++){
-                    printf("%d ", vq[i]);
+                    printf("%d ", vo[i]);
                 }
                 printf("\n-------------------------------------------\n");
                 printf("Tempo total de execucao: %.2lfms", (double)tmq);
@@ -247,7 +246,7 @@ void Ger(){
                 tmq=50000;
                 if (i5 != 3) {
                     printf("\n\n*****Pressione enter para exibir proximo do ranking*****:");
-                    getch();
+                    getchar();
                 }
             }else {
                 ///Report Média BubbleSort
@@ -257,7 +256,7 @@ void Ger(){
                 printf("Vetor Original: ");
                 int i;
                 for(i=0; i<tam; i++){
-                    printf("%d ", vb[i]);
+                    printf("%d ", vo[i]);
                 }
                 printf("\n-------------------------------------------\n");
                 printf("Tempo total de execucao: %.2lfms", (double)tmb);
@@ -268,7 +267,7 @@ void Ger(){
                 tmb=50000;
                 if (i5 != 3) {
                     printf("\n\n*****Pressione enter para exibir proximo do ranking*****:");
-                    getch();
+                    getchar();
                 }
             }
         }else {
@@ -280,7 +279,7 @@ void Ger(){
                 printf("Vetor Original: ");
                 int i;
                 for(i=0; i<tam; i++){
-                    printf("%d ", vs[i]);
+                    printf("%d ", vo[i]);
                 }
                 printf("\n-------------------------------------------\n");
                 printf("Tempo total de execucao: %.2lfms", (double)tms);
@@ -291,7 +290,7 @@ void Ger(){
                 tms=50000;
                 if (i5 != 3) {
                     printf("\n\n*****Pressione enter para exibir proximo do ranking*****:");
-                    getch();
+                    getchar();
                 }
             } else { 
                 ///Report Média BubbleSort
@@ -301,7 +300,7 @@ void Ger(){
                 printf("Vetor Original: ");
                 int i;
                 for(i=0; i<tam; i++){
-                    printf("%d ", vb[i]);
+                    printf("%d ", vo[i]);
                 }
                 printf("\n-------------------------------------------\n");
                 printf("Tempo total de execucao: %.2lfms", (double)tmb);
@@ -312,7 +311,7 @@ void Ger(){
                 tmb=50000;
                 if (i5 != 3) {
                     printf("\n\n*****Pressione enter para exibir proximo do ranking*****:");
-                    getch();
+                    getchar();
                 }
                 
             }

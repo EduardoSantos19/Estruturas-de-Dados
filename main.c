@@ -1,8 +1,6 @@
 #include "header.h"
 #include <stdio.h>
-#include <conio.h>
 #include <stdlib.h>
-#include <windows.h>
 
 int main(){
 
@@ -11,6 +9,6 @@ int main(){
     printf("\n-------------------------------------------\n");
     printf("\nPressione qualquer tecla para encerrar o programa: \n");
     printf("-------------------------------------------\n");
-    getch();
+    getchar();
     return 0;
 }
