@@ -210,6 +210,9 @@ void Ger(){
         QuickSort(vq, tam);
         tmq += (clock() - t);
     }
+
+    // Logica de controle para tempo maximo nos gerador de ranking 
+
     if (tmb >= tmq && tmb >= tms) {
         tempo_max = tmb;
     } else if (tmq >= tmb && tmq >= tms) {
