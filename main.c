@@ -1,12 +1,11 @@
 #include "header.h"
 #include <stdio.h>
-<<<<<<< Updated upstream
+
 #include <stdlib.h>
-=======
-//#include <conio.h>
+
+#include <conio.h>
 #include <stdlib.h>
-//#include <windows.h>
->>>>>>> Stashed changes
+#include <windows.h>
 
 int main(){
 

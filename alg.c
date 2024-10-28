@@ -1,10 +1,9 @@
 #include "header.h"
 #include <time.h>
 #include <stdio.h>
-<<<<<<< Updated upstream
-=======
-//#include <conio.h>
->>>>>>> Stashed changes
+
+#include <conio.h>
+
 #include <stdlib.h>
 
 //variaveis de controle
@@ -367,20 +366,20 @@ void Ger(){
     
     printf("===========================================================================\n");
     printf("===========================================================================\n");
-<<<<<<< Updated upstream
+
     printf("Execucao de algoritmos comcluida com sucesso, %d rodadas por algoritimo!", run);
     printf("\nTotal de execucoes: %d", (run*3));
     printf("\n===========================================================================\n");
     printf("===========================================================================");
     printf("\n*********************************************************************************************\n\n\n\n\n\n\n\n"); 
     printf("*****Pressione enter para exibir resultados*****:");
-=======
+
     printf("Execucao de algoritmos comcluida com sucesso, %d rodadas por algoritimo!\n", run);
     printf("Total de execucoes: %d\n", (run*3*3));
     printf("===========================================================================\n");
     printf("===========================================================================\n");
     printf("\n*****   Pressione enter para exibir resultados   *****:\n");
->>>>>>> Stashed changes
+
     getchar();
     
 
@@ -395,15 +394,11 @@ void Ger(){
                 printf("Ordenacao QuickSort: N-%d",i5);
                 printf("\n===========================================\n");
                 printf("Vetor Original: ");
-<<<<<<< Updated upstream
-                //Printa Vetor Original
-                int i;
-                for(i=0; i<tam; i++){
-                    printf("%d ", vo[i]);
-                }
-=======
+
+              
+
                 printV(vo);
->>>>>>> Stashed changes
+
                 printf("\n-------------------------------------------\n");
                 printf("Tempo total de execucao: %.2lfms", (double)tmq);
                 printf("\n-------------------------------------------\n");
@@ -421,14 +416,11 @@ void Ger(){
                 printf("Ordenacao BobbleSort: N-%d",i5);
                 printf("\n===========================================\n");
                 printf("Vetor Original: ");
-<<<<<<< Updated upstream
-                int i;
-                for(i=0; i<tam; i++){
-                    printf("%d ", vo[i]);
-                }
-=======
+
+          
+
                 printV(vo);
->>>>>>> Stashed changes
+
                 printf("\n-------------------------------------------\n");
                 printf("Tempo total de execucao: %.2lfms", (double)tmb);
                 printf("\n-------------------------------------------\n");
@@ -448,14 +440,11 @@ void Ger(){
                 printf("Ordenacao SelectionSort: N-%d",i5);
                 printf("\n===========================================\n");
                 printf("Vetor Original: ");
-<<<<<<< Updated upstream
-                int i;
-                for(i=0; i<tam; i++){
-                    printf("%d ", vo[i]);
-                }
-=======
+
+               
+
                 printV(vo);
->>>>>>> Stashed changes
+
                 printf("\n-------------------------------------------\n");
                 printf("Tempo total de execucao: %.2lfms", (double)tms);
                 printf("\n-------------------------------------------\n");
@@ -473,14 +462,11 @@ void Ger(){
                 printf("Ordenacao BobbleSort: N-%d",i5);
                 printf("\n===========================================\n");
                 printf("Vetor Original: ");
-<<<<<<< Updated upstream
-                int i;
-                for(i=0; i<tam; i++){
-                    printf("%d ", vo[i]);
-                }
-=======
+
+        
+
                 printV(vo);
->>>>>>> Stashed changes
+
                 printf("\n-------------------------------------------\n");
                 printf("Tempo total de execucao: %.2lfms", (double)tmb);
                 printf("\n-------------------------------------------\n");
@@ -491,12 +477,12 @@ void Ger(){
                 if (i5 != 3) {
                     printf("\n\n*****Pressione enter para exibir proximo do ranking*****:");
                     getchar();
-<<<<<<< Updated upstream
-                }
+
                 
-=======
+                
+
                 }                
->>>>>>> Stashed changes
+
             }
         }
     }    
