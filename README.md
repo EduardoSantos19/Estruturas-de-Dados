@@ -19,3 +19,23 @@ BubbleSort: Um algoritmo simples que compara pares de elementos adjacentes e tro
 
 Licença
 Este projeto é de uso acadêmico e está sob a licença MIT.
+
+Passos para Compilar e Rodar:
+
+Clone o repositório:
+git clone https://github.com/EduardoSantos19/Estruturas-de-Dados.git
+
+
+Acesse o diretório do projeto:
+cd Estruturas-de-Dados
+
+Compile o código:
+gcc main.c alg.c -o ordering-test.exe
+
+
+Execute o programa (Windows):
+ordering-test.exe
+
+Para sistemas baseados em Unix (como Linux ou macOS):
+./ordering-test.exe
+
